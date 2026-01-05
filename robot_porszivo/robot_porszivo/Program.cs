@@ -29,7 +29,34 @@ namespace robot_porszivo
             
             int koszSzam = 0;
             int szabadSzam = 0;
+
+           
+            do
+            {
+                koszSzam = 0;
+                szabadSzam = 0;
+            
+                for (int i = 0; i < sorSzam; i++)
+                {
+                    for (int j = 0; j < oszlopSzam; j++)
+                    {
+                        int r = veletlen.Next(100);
+            
+                        if (r < 50)
+                            lakas[i, j] = '-';
+                        else if (r < 70)
+                            lakas[i, j] = 'b';
+                        else
+                            lakas[i, j] = 'k';
+            
+                        if (lakas[i, j] == '-') szabadSzam++;
+                        if (lakas[i, j] == 'k') koszSzam++;
+                    }
+                }
+            }
+            while (szabadSzam == 0 || koszSzam == 0);
         }
     }
 }
+
 
