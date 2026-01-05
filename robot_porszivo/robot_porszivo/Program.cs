@@ -73,9 +73,43 @@ namespace robot_porszivo
             
              int lepesSzam = 0;
              int tisztitottDb = 0;
+             
+             while (koszSzam > 0)
+             {
+                 int irany = veletlen.Next(4);
+                 int ujSor = robotSor;
+                 int ujOszl = robotOszl;
+            
+                 if (irany == 0) ujSor--; // fel
+                 if (irany == 1) ujSor++; // le
+                 if (irany == 2) ujOszl--; // bal
+                 if (irany == 3) ujOszl++; // jobb
+            
+                 if (ujSor < 0 || ujOszl < 0 ||
+                     ujSor >= sorSzam || ujOszl >= oszlopSzam)
+                     continue;
+            
+                 if (lakas[ujSor, ujOszl] == 'b')
+                     continue;
+            
+                 lakas[robotSor, robotOszl] = '-';
+                 robotSor = ujSor;
+                 robotOszl = ujOszl;
+            
+                 if (lakas[robotSor, robotOszl] == 'k')
+                 {
+                     tisztitottDb++;
+                     koszSzam--;
+                 }
+            
+                 lakas[robotSor, robotOszl] = 'r';
+                 lepesSzam++;
+             }
+
         }
     }
 }
+
 
 
 
