@@ -110,9 +110,16 @@ namespace robot_porszivo
                  Console.WriteLine("\nTAKARITAS UTAN:");
                      Kiir(lakas);
 
+                
+                    Console.WriteLine("\nSTATISZTIKA:");
+                    Console.WriteLine("Lepesek szama: " + lepesSzam);
+                    Console.WriteLine("Feltakaritott kosz: " + tisztitottDb);
+                }
+
         }
     }
 }
+
 
 
 
