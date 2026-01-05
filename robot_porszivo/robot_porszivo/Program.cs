@@ -105,10 +105,15 @@ namespace robot_porszivo
                  lakas[robotSor, robotOszl] = 'r';
                  lepesSzam++;
              }
+             
+                 lakas[robotSor, robotOszl] = '-';
+                 Console.WriteLine("\nTAKARITAS UTAN:");
+                     Kiir(lakas);
 
         }
     }
 }
+
 
 
 
