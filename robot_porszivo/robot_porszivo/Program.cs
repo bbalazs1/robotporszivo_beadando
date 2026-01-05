@@ -115,10 +115,20 @@ namespace robot_porszivo
                     Console.WriteLine("Lepesek szama: " + lepesSzam);
                     Console.WriteLine("Feltakaritott kosz: " + tisztitottDb);
                 }
-
+                    static void Kiir(char[,] lakas)
+            {
+                for (int i = 0; i < lakas.GetLength(0); i++)
+                {
+                    for (int j = 0; j < lakas.GetLength(1); j++)
+                    {
+                        Console.Write(lakas[i, j] + " ");
+                    }
+                    Console.WriteLine();
+            }
         }
     }
 }
+
 
 
 
