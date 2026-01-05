@@ -66,9 +66,17 @@ namespace robot_porszivo
              while (lakas[robotSor, robotOszl] != '-');
             
              lakas[robotSor, robotOszl] = 'r';
+
+             
+             Console.WriteLine("\nTAKARITAS ELOTT:");
+             Kiir(lakas);
+            
+             int lepesSzam = 0;
+             int tisztitottDb = 0;
         }
     }
 }
+
 
 
 
