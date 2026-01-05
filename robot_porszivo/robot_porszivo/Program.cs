@@ -55,8 +55,20 @@ namespace robot_porszivo
                 }
             }
             while (szabadSzam == 0 || koszSzam == 0);
+
+             
+             int robotSor, robotOszl;
+             do
+             {
+                 robotSor = veletlen.Next(sorSzam);
+                 robotOszl = veletlen.Next(oszlopSzam);
+             }
+             while (lakas[robotSor, robotOszl] != '-');
+            
+             lakas[robotSor, robotOszl] = 'r';
         }
     }
 }
+
 
 
